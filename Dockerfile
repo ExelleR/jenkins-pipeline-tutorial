@@ -1,13 +1,6 @@
 FROM golang:alpine as builder
 
-RUN set -eux; \ 
- 	apk add --no-cache --virtual .build-deps \ 
- 		bash \ 
- 		gcc \ 
- 		musl-dev \ 
- 		openssl \ 
- 		go \ 
- 	; \ 
+RUN apk add gcc
 
 
 COPY . /code
