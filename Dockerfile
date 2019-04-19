@@ -1,6 +1,6 @@
 FROM golang:alpine as builder
 
-RUN apk add gcc
+RUN apk add alpine-sdk
 
 
 COPY . /code
